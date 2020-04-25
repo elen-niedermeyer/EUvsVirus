@@ -1,0 +1,13 @@
+<label for="symptoms">Choose Your Symptoms:</label><br>
+<select multiple id="symptoms" name="symptom_list" form="symptom_form">
+    <option *ngFor="let key of symptomKeys" value="SYMPTOMS[key]">{{symptomToString(SYMPTOMS[key])}}</option>
+</select>
+
+<br><br>
+
+<form id="symptom_form">
+    <label for="other">Others:</label>
+    <input type="text" id="other" name="other">
+    <br><br>
+    <input type="submit">
+</form>
